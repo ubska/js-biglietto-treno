@@ -8,6 +8,30 @@ L’output del prezzo finale va messo fuori in forma umana (con massimo due deci
 */
 
 
-// chiedere il numero di chilometri che si vuole percorrere
-let chilometri = parseInt(prompt("Quanti km vuole percorrere"));
+// CHIEDERE IL NUMERO DI CHILOMETRI CHE SI VUOLE PERCORRERE
+let chilometri = parseInt(prompt("Quanti km vuole percorrere?"));
 console.log(chilometri);
+
+
+// CHIEDERE L'ETà
+let userAge = parseInt(prompt("Quanti anni ha?"));
+console.log(userAge);
+
+//PREZZO AL KM (0.21 € KM) * MOLTIPLICARE AI KM DA PERCORRERE = (PREZZO DEL BIGLIETTO SENZA SCONTO)
+let prezzo = chilometri * 0.21;
+console.log(prezzo + "€"); 
+
+//APPLICARE LO SCONTO IN BASE ALL'ETà
+  //se l'età è minore di 18 allora applica sconto del 20%
+  //se l'età è maggiore di 65 allora applica sconto del 40%
+  //se no rimane prezzo senza sconto
+
+if (userAge < 18) {
+    document.getElementById("mio_id").innerHTML = ((prezzo / 100) * 80);
+}else if (userAge > 65) {
+    document.getElementById("mio_id").innerHTML = ((prezzo / 100) * 60);
+}else{
+    document.getElementById("mio_id").innerHTML = prezzo;
+}
+
+  
