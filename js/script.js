@@ -6,3 +6,8 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 */
+
+
+// chiedere il numero di chilometri che si vuole percorrere
+let chilometri = parseInt(prompt("Quanti km vuole percorrere"));
+console.log(chilometri);
